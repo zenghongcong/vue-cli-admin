@@ -4,6 +4,19 @@
   </div>
 </template>
 
+<script>
+export default {
+  mounted(){
+    this.ajax({
+      type: "get",
+      url: "/adsad/asdasd",
+      data: {}
+    })
+  }
+}
+</script>
+
+
 <style lang="stylus">
 .index {
   text-align: center;
