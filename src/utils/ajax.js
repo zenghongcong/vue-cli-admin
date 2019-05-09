@@ -107,8 +107,4 @@ function compare(pro) {
   };
 }
 
-export default {
-  methods: {
-    ajax
-  }
-};
+export default ajax;

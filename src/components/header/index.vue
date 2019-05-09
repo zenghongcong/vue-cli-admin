@@ -1,7 +1,7 @@
 <template>
   <div class="v-header">
     <div class="app">
-      <i class="el-icon-s-home"></i>
+      <i class="el-icon-s-platform"></i>
       管理后台
     </div>
     <div class="handle">

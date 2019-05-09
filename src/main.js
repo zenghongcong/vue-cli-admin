@@ -1,7 +1,7 @@
 import Vue from "vue";
 import router from "@/router";
 import store from "@/store";
-import {ajax, regex } from "@/utils";
+import {ajax, upload, regex, delay } from "@/utils";
 import App from "@/App.vue";
 import "@/element-ui"
 import 'reset-css';
@@ -13,7 +13,9 @@ if (process.globalConfig.uweb) {
   require("@/uweb");
 }
 
-Vue.mixin(ajax);
+Vue.prototype.$delay = delay;
+Vue.prototype.$upload = upload;
+Vue.prototype.$ajax = ajax;
 Vue.mixin(regex);
 
 new Vue({

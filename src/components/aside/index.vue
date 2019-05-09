@@ -1,24 +1,36 @@
 <template>
   <el-menu :default-active="$route.path" :router="true">
-    <el-submenu index="1">
+    <el-submenu v-for="(item, index) in menu" :index="index" :key="item.title">
       <template slot="title">
-        <i class="el-icon-message"></i>导航一
+        <i class="v-icon-menu" :class="item.icon"></i>
+        {{item.title}}
       </template>
       <el-menu-item-group>
-        <el-menu-item index="/some">选项1</el-menu-item>
-        <el-menu-item index="/about">选项2</el-menu-item>
-        <el-menu-item index="/mine">选项3</el-menu-item>
+        <el-menu-item v-for="it in item.child" :index="it.path" :key="it.title">{{it.title}}</el-menu-item>
       </el-menu-item-group>
     </el-submenu>
   </el-menu>
 </template>
 
 <script>
+import menu from "./menu";
 export default {
   data() {
-    return {};
+    return {
+      menu
+    };
   },
   methods: {}
 };
 </script>
+<style lang="stylus">
+.el-menu {
+  .v-icon-menu {
+    font-size: 18px;
+    vertical-align: top;
+    margin-top: 19px;
+  }
+}
+</style>
+
 
