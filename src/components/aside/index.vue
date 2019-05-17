@@ -1,6 +1,6 @@
 <template>
   <el-menu :default-active="$route.path" :router="true">
-    <el-submenu v-for="(item, index) in menu" :index="index" :key="item.title">
+    <el-submenu v-for="(item, index) in menu" :index="index+''" :key="item.title">
       <template slot="title">
         <i class="v-icon-menu" :class="item.icon"></i>
         {{item.title}}
